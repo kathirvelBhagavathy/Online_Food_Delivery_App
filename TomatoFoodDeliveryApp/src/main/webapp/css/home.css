@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+.restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.restaurant-card {
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255,59,48,0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.restaurant-card.false {
+    filter: grayscale(100%);
+}
+
+.restaurant-info {
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.restaurant-info h2 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.address, .cuisine {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.rating {
+    color: #ff9800;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    background-color: #ff3b30;
+    color: white;
+    text-decoration: none;
+}
+
+.status.Active {
+	display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+    text-decoration: none;
+	background-color: #4caf50;
+}
+
+.status.InActive {
+	display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+    text-decoration: none;
+	background-color: #ff3b30;
+}
+
+

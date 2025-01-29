@@ -1,0 +1,101 @@
+@charset "UTF-8";
+.error-container {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.error-content {
+    background: #111;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255,59,48,0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.error-emoji {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    animation: wobble 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+.error-face {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.error-content h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #ff2419;
+    transform: scale(1.05);
+}
+
+@keyframes wobble {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .error-content {
+        padding: 2rem;
+    }
+
+    .error-emoji {
+        font-size: 4rem;
+    }
+
+    .error-face {
+        font-size: 3rem;
+    }
+
+    .error-content h1 {
+        font-size: 2rem;
+    }
+
+    .error-message {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+.confirmation-container {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.confirmation-content {
+    background: #111;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255,59,48,0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.status-message {
+    margin-bottom: 3rem;
+}
+
+.status-message h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.status {
+    color: #4caf50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.order-id {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* Animation Container */
+.animation-container {
+    position: relative;
+    height: 150px;
+    margin: 3rem 0;
+    overflow: hidden;
+}
+
+.road {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 4px;
+    background: #333;
+}
+
+.bike-container {
+    position: absolute;
+    bottom: 34px;
+    animation: ride 3s linear infinite;
+}
+
+.bike {
+    font-size: 3rem;
+    transform: scaleX(-1);
+    animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes ride {
+    0% {
+        left: -50px;
+    }
+    100% {
+        left: calc(100% + 50px);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: scaleX(-1) translateY(0);
+    }
+    to {
+        transform: scaleX(-1) translateY(-10px);
+    }
+}
+
+.home-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.home-button:hover {
+    background-color: #ff2419;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .confirmation-content {
+        padding: 2rem;
+    }
+
+    .status-message h1 {
+        font-size: 2rem;
+    }
+
+    .status {
+        font-size: 1.2rem;
+    }
+
+    .animation-container {
+        height: 120px;
+    }
+
+    .bike {
+        font-size: 2.5rem;
+    }
+}

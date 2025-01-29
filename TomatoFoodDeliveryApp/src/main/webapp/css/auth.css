@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* Styles for sign in and sign up pages */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 2rem;
+}
+
+.auth-form {
+    background: #111;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,59,48,0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.auth-form input,
+.auth-form textarea,
+.auth-form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background: #222;
+    color: white;
+}
+
+.auth-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-form p {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+.auth-form a {
+    color: white;
+}

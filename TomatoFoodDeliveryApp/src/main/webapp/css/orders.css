@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.orders-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.orders-container h1 {
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.order-card {
+    background: #111;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(255,59,48,0.2);
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(255,59,48,0.3);
+}
+
+.order-info {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.order-id, .restaurant-id {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.order-date {
+    color: #888;
+}
+
+.order-total {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.order-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #333;
+}
+
+.order-status {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.status-delivered {
+    background: #4caf50;
+    color: white;
+}
+
+.status-processing {
+    background: #ff9800;
+    color: white;
+}
+
+.payment-mode {
+    color: #888;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #111;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(255,59,48,0.2);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #222;
+}
+
+.dropdown-content a.disabled {
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
